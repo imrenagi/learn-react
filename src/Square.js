@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import './index.css';
 
@@ -12,7 +14,7 @@ export default class Square extends React.Component {
 
   render() {
     return (
-      <button className="square" onClick={() => this.props.onClick()}>
+      <button className="btn btn-primary" onClick={() => this.props.onClick()}>
         {this.props.value}
       </button>
     );
