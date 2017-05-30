@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Game from './game';
+import Home from './home';
 import SimpleMapExample from './components/GoogleMaps';
 
 ReactDOM.render(
-  <Game />,
+  <Home />,
   document.getElementById('root')
 );

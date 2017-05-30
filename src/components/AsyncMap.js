@@ -6,6 +6,8 @@ import FaSpinner from 'react-fa';
 
 import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import withScriptjs from "react-google-maps/lib/async/withScriptjs";
+
+import 'bootstrap/dist/css/bootstrap.css';
 /*
  * This is the modify version of:
  * https://developers.google.com/maps/documentation/javascript/examples/event-arguments
@@ -18,8 +20,9 @@ const AsyncGettingStartedExampleGoogleMap = _.flowRight(
 )(props => (
   <GoogleMap
     ref={props.onMapLoad}
-    defaultZoom={3}
-    defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
+    defaultZoom={5}
+    defaultCenter={{ lat: -4.30429342, lng: 125.1884454 }}
+    mapTypeId={'satellite'}
     onClick={props.onMapClick}
   >
     {props.markers.map(marker => (
@@ -76,12 +79,6 @@ export default class AsyncGettingStartedExample extends Component {
       markers: nextMarkers,
     });
 
-    if (nextMarkers.length === 3) {
-      // this.props.toast(
-      //   `Right click on the marker to remove it`,
-      //   `Also check the code!`
-      // );
-    }
   }
 
   handleMarkerRightClick(targetMarker) {
@@ -113,15 +110,16 @@ export default class AsyncGettingStartedExample extends Component {
             />
           </div>
         }
+
         containerElement={
-          <div style={{ height: `100%` ,  position: 'absolute',
-            top: `150px`,
-            left: 0,
-            right: 0,
-            bottom: 0}} />
+          <div className="col-lg-11 col-sm-11 col-xs-11 col-md-11" style={{
+            position: 'absolute',
+            height: `100%`,
+            // width: `100%`,
+            }} />
         }
         mapElement={
-          <div style={{ height: `50%` }} />
+          <div style={{ height: `80%`}} />
         }
         onMapLoad={this.handleMapLoad}
         onMapClick={this.handleMapClick}

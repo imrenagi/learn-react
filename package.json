@@ -10,7 +10,9 @@
     "react-dom": "^15.5.4",
     "react-fa": "^4.2.0",
     "react-google-maps": "^6.3.0",
-    "react-helmet": "^5.1.3"
+    "react-helmet": "^5.1.3",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.68.4"
   },
   "devDependencies": {
     "react-hot-loader": "^1.3.1",
