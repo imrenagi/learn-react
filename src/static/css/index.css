@@ -1,11 +1,17 @@
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 html {
   font-size: 20px;
   text-align: center;
   color: #fffff;
+  height: 100%;
+}
+
+div {
+  height: 100%;
 }
 
 h2.section-title {
@@ -15,6 +21,11 @@ h2.section-title {
   padding-right: 40px;
   padding-left: 40px;
   text-align: center;
+}
+
+.test2 {
+  width: 500px;
+  height: 300px;
 }
 
 p {
